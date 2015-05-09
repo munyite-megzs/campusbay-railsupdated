@@ -1,0 +1,47 @@
+<h1>Create a New Listing</h1>
+<%= form_for(@product) do |f| %>
+  <ul>
+  <% @product.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :productTitle %><br />
+    <%= f.text_field :productTitle %>
+  </p>
+  <p>
+    <%= f.label :productDesription %><br />
+    <%= f.text_area :productDesription %>
+  </p>
+  <p>
+    <%= f.label :productImage %><br />
+    <%= f.text_area :productImage%>
+  </p>
+  <p>
+    <%= f.label :productPrice %><br />
+    <%= f.text_area :productPrice%>
+  </p>
+  <p>
+    <%= f.label :productUniversity %><br />
+    <%= f.text_area :productUniversity %>
+  </p>
+  <p>
+    <%= f.label :productCampus %><br />
+    <%= f.text_area :productCampus %>
+  </p>
+  <p>
+    <%= f.label :productCategory %><br />
+    <%= f.text_area :productCategory %>
+  </p>
+  <p>
+    <%= f.label :productEmail %><br />
+    <%= f.text_area :productEmail %>
+  </p>
+  <p>
+    <%= f.label :productPhoneNo %><br />
+    <%= f.text_area :productPhoneNo %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
