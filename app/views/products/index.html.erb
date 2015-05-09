@@ -4,8 +4,9 @@
   <% @products.each do |product| %>
     <li>
     <div class="card-panel">
-      <%= link_to product.productTitle, product_path(product) %>
+      <%= link_to product.productTitle, product_path(product), class: 'product-title-link' %>
     </div>
     </li>
   <% end %>
 </ul>
+<%= link_to "Add Product" , new_product_path, class: 'new-product'%>
