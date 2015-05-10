@@ -1,0 +1,46 @@
+<%= form_for(@product) do |f| %>
+  <ul>
+  <% @product.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :productTitle, "Product Title" %><br />
+    <%= f.text_field :productTitle %>
+  </p>
+  <p>
+    <%= f.label :productDesription, "Describe Item" %><br />
+    <%= f.text_area :productDesription %>
+  </p>
+  <p>
+    <%= f.label :productImage, "Upload Images" %><br />
+    <%= f.text_field :productImage%>
+  </p>
+  <p>
+    <%= f.label :productPrice, "Item Price" %><br />
+    <%= f.text_field :productPrice%>
+  </p>
+  <p>
+    <%= f.label :productUniversity, "University" %><br />
+    <%= f.text_field :productUniversity %>
+  </p>
+  <p>
+    <%= f.label :productCampus, "Campus" %><br />
+    <%= f.text_field :productCampus %>
+  </p>
+  <p>
+    <%= f.label :productCategory, "Select Category" %><br />
+    <%= f.text_field :productCategory %>
+  </p>
+  <p>
+    <%= f.label :productEmail, "Email Address"%><br />
+    <%= f.text_field :productEmail %>
+  </p>
+  <p>
+    <%= f.label :productPhoneNo, "Phone Number"%><br />
+    <%= f.text_field :productPhoneNo %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
