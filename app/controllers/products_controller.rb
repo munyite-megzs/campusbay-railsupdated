@@ -20,6 +20,8 @@ include ProductsHelper
 		@product = Product.find(params[:id])
 		@product.update(product_params)
 
+		flash.notice = "Item '#{@product.productTitle}' Updated!"
+
 		redirect_to product_path(@product)
 	end
 	def destroy 
